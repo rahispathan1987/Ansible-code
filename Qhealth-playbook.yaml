@@ -60,5 +60,5 @@
         command: "sudo docker run node1 -d "
         state: present
         ports:
-        - "80:80"
+        - "80:3000"
       with_sequence: count={{ container_count }}
