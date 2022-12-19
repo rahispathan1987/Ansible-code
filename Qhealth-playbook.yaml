@@ -60,6 +60,6 @@
           state: started
           auto_remove: true
           ports:
-           - "80:80"
+           - "80:3000"
        
          
