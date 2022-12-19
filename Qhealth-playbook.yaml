@@ -53,11 +53,13 @@
         name: "{{ default_container_image }}"
         source: pull
 
-    - name: Create default containers
-      community.docker.docker_container:
-        name: "{{ default_container_name }}{{ item }}"
-        image: "{{ default_container_image  }}"
-        command: "sudo docker run -p 80:3000 -d 8160161152/fibonacci-nodejs:2.0 "
-        state: present
+    - name: deploy nodejs docker container
+        docker_container  :
+          image: 8160161152/fibonacci-nodejs:2.0
+          name:  fibonanci-nodejs
+          state: started
+          auto_remove: true
+          ports:
+           - "80:80"
        
-      with_sequence: count={{ container_count }}
+         
