@@ -3,8 +3,10 @@
   become: true
   vars:
     container_count: 1
-    default_container_name: nodejs
-    default_container_image: 8160161152/sample-nodejs:2.0
+    default_container_name: fibonacci-node
+    default_container_image: 8160161152/fibonacci-nodejs:2.0
+
+
 
   tasks:
     - name: Install aptitude
