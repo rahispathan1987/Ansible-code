@@ -54,7 +54,7 @@
         source: pull
 
     - name: deploy nodejs docker container
-        docker_container  :
+        docker_container:
           image: 8160161152/fibonacci-nodejs:2.0
           name:  fibonanci-nodejs
           state: started
