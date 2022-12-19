@@ -3,7 +3,7 @@
   become: true
   vars:
     container_count: 1
-    default_container_name: node1
+    default_container_name: node
     default_container_image: 8160161152/fibonacci-nodejs:2.0
 
 
